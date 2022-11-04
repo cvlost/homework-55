@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
-import './App.css';
 import Ingredients from "../components/Ingredients/Ingredients";
+import BurgerInfo from "../components/BurgerInfo/BurgerInfo";
+import './App.css';
 
 function App() {
   const [ingredients, setIngredients] = useState<IngredientCounter[]>([
-    {name: 'Meat', count: 0},
-    {name: 'Cheese', count: 0},
     {name: 'Salad', count: 0},
+    {name: 'Cheese', count: 0},
     {name: 'Bacon', count: 0},
+    {name: 'Meat', count: 0},
   ]);
 
   const resetCount = (name: string) => {
@@ -38,6 +39,7 @@ function App() {
                    resetCount={resetCount}
                    increaseCount={increaseCount}
                    decreaseCount={decreaseCount}/>
+      <BurgerInfo list={ingredients}/>
     </div>
   );
 }
