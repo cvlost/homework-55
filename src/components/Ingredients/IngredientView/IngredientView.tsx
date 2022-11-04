@@ -13,8 +13,11 @@ interface Props {
 const IngredientView: React.FC<Props> = (props) => {
   return (
     <div className="Ingredient">
-      <img className="Ingredient-image" src={props.imageSrc} alt={props.name}/>
-      <div className="Ingredient-name">{props.name}</div>
+      <button className="Ingredient-btn-main" onClick={props.increaseCount}>
+        <img className="Ingredient-image" src={props.imageSrc} alt={props.name}/>
+        <span className="Ingredient-name">{props.name}</span>
+      </button>
+      {/*<div className="Ingredient-name">{props.name}</div>*/}
       <div className="Ingredient-count">x{props.count}</div>
       <div className="Ingredient-controls">
         <button className="Ingredient-btn Ingredient-btn-increase" onClick={props.increaseCount}>+</button>

@@ -1,7 +1,7 @@
 .Ingredient {
     display: flex;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 1.4em;
     box-shadow: 0 0 15px gainsboro;
     --radius: 20%;
     --small-shadow: 0 0 7px gainsboro;
@@ -14,16 +14,24 @@
 .Ingredient-image {
     max-width: 3.2em;
     box-shadow: var(--small-shadow);
-    margin: .4em;
+    position: relative;
+    z-index: 2;
 }
 
 .Ingredient-name {
-    flex: 1;
     padding: 0 1em;
+    position: relative;
+    z-index: 2;
 }
 
 .Ingredient-count {
+    margin-left: auto;
+}
 
+@media (max-width: 450px) {
+    .Ingredient-count {
+        margin: auto;
+    }
 }
 
 .Ingredient-controls {
@@ -41,11 +49,15 @@
     width: 3rem;
     height: 3rem;
     cursor: pointer;
-    transition: background-color .2s, color .2s;
+    transition: background-color .2s, color .2s, transform .2s;
 }
 
 .Ingredient-btn:hover {
     background-color: gainsboro;
+}
+
+.Ingredient-btn:active {
+    transform: scale(.9);
 }
 
 .Ingredient-btn-increase {
@@ -64,3 +76,41 @@
 .Ingredient-btn-reset:hover {
     color: crimson;
 }
+
+.Ingredient-btn-main {
+    font-size: inherit;
+    color: inherit;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    margin: .3em;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    transition: transform .2s;
+}
+
+.Ingredient-btn-main::before {
+    content: "";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #8a7c7c, transparent) no-repeat;
+    transition: width .2s;
+}
+
+.Ingredient-btn-main:hover::before {
+    width: 100%;
+}
+
+.Ingredient-btn-main:active {
+    transform: scale(.95);
+}
+
