@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Price.css";
 
 interface Props {
   price: number;
@@ -6,8 +7,10 @@ interface Props {
 
 const Price: React.FC<Props> = ({price}) => {
   return (
-    <div>
-      Price: <span>{price}</span>
+    <div className="Price">
+      <div className="Price-inner">
+        Price: <span>{price} som</span>
+      </div>
     </div>
   );
 };

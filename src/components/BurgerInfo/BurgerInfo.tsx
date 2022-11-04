@@ -1,7 +1,8 @@
 import React from 'react';
 import Price from "./Price/Price";
-import {INGREDIENTS} from "../../lib/Ingredients";
 import BurgerPreview from "./BurgerPreview/BurgerPreview";
+import {INGREDIENTS} from "../../lib/Ingredients";
+import './BurgerInfo.css';
 
 interface Props {
   list: IngredientCounter[];
@@ -16,9 +17,9 @@ const BurgerInfo: React.FC<Props> = ({list}) => {
   }, 0);
 
   return (
-    <div>
-      <BurgerPreview list={list}/>
+    <div className="BurgerInfo">
       <Price price={price}/>
+      <BurgerPreview list={list}/>
     </div>
   );
 };

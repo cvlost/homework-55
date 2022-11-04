@@ -2,16 +2,24 @@
     display: flex;
     align-items: center;
     font-size: 1.5em;
-    border: 2px solid green;
+    box-shadow: 0 0 15px gainsboro;
+    --radius: 20%;
+    --small-shadow: 0 0 7px gainsboro;
+}
+
+.Ingredient + .Ingredient {
+    margin-top: .5em;
 }
 
 .Ingredient-image {
-    max-width: 6em;
-    border: 1px solid red;
+    max-width: 3.2em;
+    box-shadow: var(--small-shadow);
+    margin: .4em;
 }
 
 .Ingredient-name {
-    margin: 0 1em;
+    flex: 1;
+    padding: 0 1em;
 }
 
 .Ingredient-count {
@@ -20,11 +28,24 @@
 
 .Ingredient-controls {
     margin: 0 1em;
+    display: flex;
+    box-shadow: var(--small-shadow);
 }
 
 .Ingredient-btn {
     font-size: inherit;
     color: inherit;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: background-color .2s, color .2s;
+}
+
+.Ingredient-btn:hover {
+    background-color: gainsboro;
 }
 
 .Ingredient-btn-increase {
@@ -32,9 +53,14 @@
 }
 
 .Ingredient-btn-decrease {
-
+    border-right: 1px solid gainsboro;
+    border-left: 1px solid gainsboro;
 }
 
 .Ingredient-btn-reset {
 
+}
+
+.Ingredient-btn-reset:hover {
+    color: crimson;
 }

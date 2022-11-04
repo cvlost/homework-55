@@ -1,0 +1,8 @@
+.BurgerInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.BurgerInfo .Price {
+    margin: auto;
+}

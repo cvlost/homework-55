@@ -19,7 +19,7 @@ const IngredientView: React.FC<Props> = (props) => {
       <div className="Ingredient-controls">
         <button className="Ingredient-btn Ingredient-btn-increase" onClick={props.increaseCount}>+</button>
         <button className="Ingredient-btn Ingredient-btn-decrease" onClick={props.decreaseCount}>-</button>
-        <button className="Ingredient-btn Ingredient-btn-reset" onClick={props.resetCount}>Reset</button>
+        <button className="Ingredient-btn Ingredient-btn-reset" onClick={props.resetCount}>x</button>
       </div>
     </div>
   );
