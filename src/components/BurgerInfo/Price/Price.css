@@ -1,10 +1,6 @@
 .Price {
-    font-size: 2em;
+    font-size: 1.8em;
     color: gray;
-}
-
-.Price-inner {
-
 }
 
 .Price-inner span {

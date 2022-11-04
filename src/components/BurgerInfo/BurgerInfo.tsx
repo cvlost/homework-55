@@ -9,17 +9,17 @@ interface Props {
 }
 
 const BurgerInfo: React.FC<Props> = ({list}) => {
+  const basePrice = 30;
   const price = list.reduce((acc, ingredient) => {
     if (ingredient.count)
       return acc + ingredient.count * INGREDIENTS.find(ing => ing.name === ingredient.name)!.price;
-
     return acc;
-  }, 0);
+  }, basePrice);
 
   return (
     <div className="BurgerInfo">
-      <Price price={price}/>
       <BurgerPreview list={list}/>
+      <Price price={price}/>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 .BurgerPreview {
-    min-height: 70%;
+    min-height: 50%;
     padding: 1em;
 }
 
@@ -119,6 +119,7 @@
 .Burger {
     width: 100%;
     height: 100%;
+    max-width: 420px;
     margin: auto;
     overflow: auto;
     text-align: center;
