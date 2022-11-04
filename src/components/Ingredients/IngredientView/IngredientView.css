@@ -1,0 +1,40 @@
+.Ingredient {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    border: 2px solid green;
+}
+
+.Ingredient-image {
+    max-width: 6em;
+    border: 1px solid red;
+}
+
+.Ingredient-name {
+    margin: 0 1em;
+}
+
+.Ingredient-count {
+
+}
+
+.Ingredient-controls {
+    margin: 0 1em;
+}
+
+.Ingredient-btn {
+    font-size: inherit;
+    color: inherit;
+}
+
+.Ingredient-btn-increase {
+
+}
+
+.Ingredient-btn-decrease {
+
+}
+
+.Ingredient-btn-reset {
+
+}
